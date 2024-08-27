@@ -1,0 +1,136 @@
+.introduction {
+    min-height: 300px;
+    width: auto;
+    background: url(/00.assets/coffees/582954954.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0 0 10px 10px;
+    padding: 2rem;
+}
+
+.introduction > div > div > p {
+    font-size: 1rem;
+    margin: 1rem 0;
+    color: white;
+}
+
+.introduction > div > button {
+    padding: 1rem;
+    border-radius: 20px;
+    background-color:var(--color-blue-stone);
+    border: none;
+    font-size: 1.5rem;
+    margin-bottom: 2rem; 
+    
+}
+
+.introduction > div > button > a {
+    color: var(--color-romantic);
+    
+}
+
+.introduction > div > div > p > span {
+    font-weight: bold;
+    color: var(--color-blue-stone);
+}
+
+.container-intro > button:hover {
+
+    background-color: var(--color-english-walnut);
+    border-color: var(--color-english-walnut);
+  
+    transition: all 0.3s ease-in-out;
+}
+
+.nouveautes {
+    text-align: center;
+}
+
+.nouveautes > article:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+  
+
+  
+.nouveautes > article > p {
+    margin: 1rem 0;
+}
+
+@media screen and (min-width: 1440px) {
+    .introduction::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('/00.assets/coffees/coffee-171653_1920.webp');
+        background-size: 110%;
+        background-position: center;
+        background-repeat: no-repeat;
+        transform: scaleX(-1); /* Inverse l'image horizontalement */
+        z-index: -1; /* Place le pseudo-élément derrière le contenu */
+    }
+    .introduction{
+        position: relative;
+        background: none;
+
+    }
+
+
+    .introduction >div > h1 {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+
+    .introduction > div > div  {
+        width: 40%;
+        font-size: 1.2rem;
+        margin: 2rem 0;
+        color: white;
+        background: rgba(0, 0, 0, 0.6);
+        border-radius: 5px;
+        padding: 1rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        margin-left: 5%;
+    }
+
+    .introduction > div > div > p {
+        font-size: 1.3rem;
+    }
+
+    .introduction > div > button {
+        position: absolute;
+        margin-bottom: 0;
+        left: 50%;
+        top: 95%;
+        border: 5px white solid;
+        cursor: pointer;
+
+    }
+
+    .introduction > div > button > a {
+        cursor: pointer;
+        z-index: 5;
+        cursor: pointer;
+    }
+
+    .nouveautes > h2 {
+        margin-top: 2rem;
+    }
+
+    .nouveautes > article {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 1rem;
+    }
+
+    .nouveautes{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        padding: 0 5%;
+    }
+
+}

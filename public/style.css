@@ -1,0 +1,338 @@
+:root {
+    --color-english-walnut: #3d1e04;
+    --color-cement: #8d6e63;
+    --color-mona-lisa: #ffab91;
+    --color-romantic: #f7dcba;
+    --color-blue-stone: #00695c;
+    --color-packet-font: #dec7a9;
+    --color-grey: #2a303b;
+}
+
+#mapid {
+    height: 400px;
+    width: 100%;
+}
+
+html {
+    background-color: white;
+    height: 100dvh;
+    font-family: "Montserrat", sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav > span {
+    font-family: "Coffee", sans-serif;
+    font-size: 5rem;
+    color: var(--color-blue-stone);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 5;
+}
+
+.logo {
+    width: 50%;
+    min-width: 70px;
+}
+
+#burger-menu {
+    cursor: pointer;
+    height: 27px;
+    width: 27px;
+    overflow: visible;
+    position: relative;
+    z-index: 2;
+    margin: 2rem;
+}
+
+#burger-menu span,
+#burger-menu span:before,
+#burger-menu span:after {
+    background: var(--color-blue-stone);
+    display: block;
+    height: 4px;
+    opacity: 1;
+    position: absolute;
+    transition: 0.3s ease-in-out;
+}
+
+#burger-menu span:before,
+#burger-menu span:after {
+    content: "";
+}
+
+#burger-menu span {
+    right: 0px;
+    top: 13px;
+    width: 27px;
+}
+#burger-menu span:before {
+    left: 0px;
+    top: -10px;
+    width: 16px;
+}
+#burger-menu span:after {
+    left: 0px;
+    top: 10px;
+    width: 20px;
+}
+#burger-menu.close span {
+    transform: rotate(-45deg);
+    top: 13px;
+    width: 27px;
+}
+#burger-menu.close span:before {
+    top: 0px;
+    transform: rotate(90deg);
+    width: 27px;
+}
+#burger-menu.close span:after {
+    top: 0px;
+    left: 0;
+    transform: rotate(90deg);
+    opacity: 0;
+    width: 0;
+}
+
+#menu {
+    z-index: 1;
+    min-width: 100%;
+    min-height: 100%;
+    position: fixed;
+    top: 0;
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+    text-align: center;
+    padding-top: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+#menu.overlay {
+    visibility: visible;
+    opacity: 1;
+    padding-top: 100px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#menu li {
+    list-style: none;
+}
+
+#menu a {
+    color: #fff;
+    display: block;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-top: 2rem;
+    color: white;
+    font-family: "Coffee", sans-serif;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 2rem;
+    color: var(--color-english-walnut);
+    font-family: "Coffee", sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    text-decoration: underline var(--color-blue-stone);
+}
+
+h3 {
+    margin-top: 1.5rem;
+    color: var(--color-english-walnut);
+    font-family: "Coffee", sans-serif;
+    font-weight: 500;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    font-size: 1.5rem;
+}
+
+article {
+    margin: 1rem;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+article > p {
+    margin-bottom: 0.5rem;
+}
+
+.product-card img {
+    width: 60%;
+    margin: auto;
+}
+
+.product-card button {
+    padding: 1rem;
+    border-radius: 20px;
+    background-color: var(--color-blue-stone);
+    border: none;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.product-card a {
+    color: var(--color-romantic);
+}
+
+article > button:hover {
+    background-color: var(--color-english-walnut);
+    border-color: var(--color-english-walnut);
+    
+    transition: all 0.3s ease-in-out;
+}
+
+footer {
+    border-top: var(--color-blue-stone) solid 1px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+footer > ul {
+    gap: 1rem;
+}
+footer > ul {
+    list-style: none;
+    gap: 3rem;
+}
+footer > ul > li > a {
+    color: var(--color-english-walnut);
+    cursor: pointer;
+}
+
+.socials {
+    display: flex;
+}
+.socials > a > img {
+    width: 70%;
+}
+.container-logo-footer {
+    display: flex;
+    font-family: "Coffee", sans-serif;
+    font-size: 2.5rem;
+    color: var(--color-blue-stone);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    align-items: center;
+    display: none;
+}
+
+
+/* Page 404*/
+.erreur-404 > h1 {
+    color: var(--color-packet-font);
+    margin-left: 5%;
+}
+
+.container-boutique-experience > h2 {
+    color: white;
+}
+.container-boutique-experience > p {
+    color: white;
+}
+.container-boutique-savoir-faire > p {
+    color: white;
+}
+
+/* MEDIA QUERIES */
+/*DESKTOP*/
+@media screen and (min-width: 1440px) {
+    header {
+        z-index: 10;
+    }
+
+    nav > a {
+        margin-left: 5%;
+        padding-left: 2rem;
+    }
+
+    #burger-menu {
+        display: none;
+    }
+
+    #menu {
+        position: static;
+        visibility: visible;
+        opacity: 1;
+        min-width: auto;
+        min-height: auto;
+        transition: none;
+    }
+
+    ul {
+        display: flex;
+        gap: 5rem;
+        margin-right: 3rem;
+    }
+
+    #menu a {
+        color: var(--color-english-walnut);
+        font-weight: 400;
+        font-size: 1rem;
+        display: inline-block;
+        margin: 0;
+        border-bottom: var(--color-blue-stone) 3px solid;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    #menu a:hover {
+        border-bottom: var(--color-packet-font) 3px solid;
+    }
+
+    button a {
+        display: block;
+    }
+
+    
+    h1 {
+        font-size: 3.5rem;
+        display: flex;
+        flex-direction: column;
+        margin-left: 5%;
+    }
+
+    h2 {
+        grid-column: span 3;
+        text-align: left;
+        margin-left: 2rem;
+        font-size: 2.5rem;
+    }
+
+    h3 {
+        font-size: 2rem;
+    }
+
+
+    
+
+    /* .visual-coffee {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    } */
+
+  
+
+
+    
+}

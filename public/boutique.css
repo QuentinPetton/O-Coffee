@@ -1,0 +1,244 @@
+
+/* Page boutique  */
+
+.boutique-intro {
+    background-color: white;
+    gap: 5rem;
+    margin: 2rem 5%;
+}
+
+.boutique-intro > .container-img {
+    margin: 0 0 2rem 0;
+}
+
+.container-boutique-intro > h2 {
+    margin: 1rem 0;
+}
+
+.container-boutique-intro > p {
+    padding: 1rem 0;
+}
+
+.container-boutique-savoir-faire {
+    padding: 1rem;
+}
+.container-boutique-experience > h2 {
+    padding: 0 0 1rem 0;
+    margin-left: 0;
+}
+
+.container-boutique-savoir-faire > p {
+    padding: 1rem 0;
+}
+
+.container-boutique-savoir-faire > h2 {
+    padding: 0 0 1rem 0;
+}
+
+.boutique-savoir-faire {
+    background-color: var(--color-grey);
+    gap: 5rem;
+    margin: 0 0;
+    padding: 2rem 5%;
+}
+.container-boutique-savoir-faire > h2 {
+    color: white;
+}
+
+.boutique-savoir-faire > .container-img-savoir-faire {
+    margin: 0 5%;
+}
+
+.boutique-formulaire {
+    gap: 5rem;
+    margin: 2rem 5%;
+}
+.boutique-experience {
+    margin: 2rem 5%;
+}
+
+.feedback-input {
+    border-radius: 5px;
+    line-height: 22px;
+    background-color: transparent;
+    border: 2px solid var(--color-blue-stone);
+    padding: 13px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.feedback-input:focus {
+    border: 2px solid var(--color-packet-font);
+}
+
+textarea {
+    height: 150px;
+    line-height: 150%;
+    resize: vertical;
+}
+
+.button-submit {
+    padding: 1rem;
+    border-radius: 20px;
+    background-color: var(--color-blue-stone);
+    border: none;
+    font-size: 1rem;
+    margin: 2rem 0;
+    width: 100%;
+    cursor: pointer;
+    color: var(--color-packet-font);
+}
+
+.button-submit:hover {
+    background-color: var(--color-english-walnut);
+    border-color: var(--color-english-walnut);
+
+    transition: all 0.3s ease-in-out;
+}
+
+/*  Animation */
+
+.container-boutique-experience > p,
+.container-boutique-savoir-faire > p {
+    animation: slide linear;
+    animation-timeline: view();
+    animation-range-start: cover 0%;
+    animation-range-end: cover 30%;
+}
+
+.container-img-experience > img,
+.container-img-savoir-faire > img {
+    object-fit: cover;
+    animation: reveal linear;
+    animation-timeline: view();
+    animation-range-start: cover 0%;
+    animation-range-end: contain 50%;
+}
+
+.boutique-formulaire > .container-boutique-test > h2 {
+    object-fit: cover;
+    animation: reveal linear;
+    animation-timeline: view();
+    animation-range-start: cover 0%;
+    animation-range-end: contain 50%;
+}
+
+@keyframes slide {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.container-boutique-experience > h2,
+.container-boutique-savoir-faire > h2 {
+    animation: slide linear;
+    animation-timeline: view();
+    animation-range-start: cover 0%;
+    animation-range-end: cover 50%;
+}
+@keyframes reveal {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+
+    /* Page boutique  */
+
+    .boutique-intro {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        background-color: white;
+        gap: 5rem;
+        margin: 0 5% 2rem 5%;
+    }
+
+    .container-boutique-intro > h2 {
+        margin-left: 0;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .boutique-savoir-faire {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        background-color: var(--color-grey);
+        gap: 5rem;
+        margin: 0;
+        padding: 2rem 5%;
+        align-items: center;
+    }
+
+    .container-boutique-savoir-faire > h2 {
+        margin-left: 0;
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .boutique-experience {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        background-color: white;
+        gap: 5rem;
+        margin: 2rem 5%;
+    }
+    .container-boutique-test > h2 {
+        margin-left: 0;
+    }
+
+    .container-main-boutique {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .boutique-intro {
+        grid-column: span 3;
+    }
+    .boutique-savoir-faire {
+        grid-column: span 3;
+    }
+    .boutique-experience {
+        grid-column: span 3;
+    }
+
+    .boutique-savoir-faire > .container-boutique-savoir-faire {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .boutique-savoir-faire > .container-img {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .container-boutique-test {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5%;
+    }
+
+    .container-logo-footer {
+        display: flex;
+        width: 20%;
+    }
+
+    .container-logo-footer > a {
+        width: 50%;
+    }
+    .footer > ul {
+        display: flex;
+    }
+
+
+    
+}

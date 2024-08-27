@@ -1,0 +1,84 @@
+
+/* Spécifique page détails produit*/
+
+.details > .description > button > a {
+    color: var(--color-packet-font);
+}
+
+.details > figure > img {
+    margin: auto;
+    width: 70%;
+}
+.details > div {
+    margin: 2rem;
+}
+
+.details > div > h3 {
+    padding: 1rem 0;
+}
+
+.details > .details-img {
+    border-radius: 5px;
+}
+
+.details > div > ul > li {
+    list-style: none;
+}
+.details > div > ul {
+    padding-left: 0;
+}
+
+.details > div > button {
+    padding: 1rem;
+    border-radius: 20px;
+    background-color: var(--color-blue-stone);
+    border: none;
+    font-size: 1rem;
+    margin: 2rem 0;
+}
+
+.details > div > p {
+    margin: 1rem 0;
+    font-weight: bold;
+}
+
+time {
+    font-style: italic;
+}
+
+
+
+@media screen and (min-width: 1440px) {
+
+/* Pour page details  */
+.details {
+    display: flex;
+    padding: 0 5% 2rem 5%;
+    margin: 0 0 2rem 0;
+    align-items: center;
+    gap: 5rem;
+}
+.details > .description {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.details > div > ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.details > figure > img {
+    margin: auto;
+    width: 100%;
+}
+
+.details > figure {
+    width: 30%;
+    padding-left: 2rem;
+}
+
+
+}

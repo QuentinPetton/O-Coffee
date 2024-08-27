@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <%- include("./partials/head") %>
+        <link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+  crossorigin=""
+/>
+
+<script
+  src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+  crossorigin=""
+></script>
+
+        <script src="/map.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="/mail.js"></script>
+
+
+        <link rel="stylesheet" href="/boutique.css">
+        <title>O'Coffee - Boutique</title>
+    </head>
+    <body>
+
+<%- include('./partials/header') %>
+<main>
+    
+    <div class="container-main-boutique">
+    <section class="boutique-intro">
+        <div class="container-img">
+    <img class="about" src="/00.assets/about.jpg" alt="Table présentant plusieurs arôme de café">
+    </div>
+    
+    <div class="container-boutique-intro">
+    <h2>Qui sommes-nous ?</h2>
+    <p>Nous sommes Jean et Jacques Pepper, deux frères passionnés par le café, fondateurs de la boutique.
+        Avec une expertise approfondie et un amour profond pour cette délicieuse boisson, Nous avons créé un espace où
+        le café est célébré comme une expérience raffinée et inspirante.
+    </p>
+
+    <P>
+        Que vous soyez un connaisseur de café ou un novice curieux, nous sommes là pour vous guider dans un voyage sensoriel inoubliable, où chaque gorgée révèle un monde de saveurs riches et complexes.
+    </P>
+    </div>
+    </section>
+
+
+    <section class="boutique-savoir-faire">
+        <div class="container-img-savoir-faire">
+            <img class="grains café" src="/00.assets/coffees/302932754.webp" alt="Machine pour trier café">
+            </div>
+            
+        <div class="container-boutique-savoir-faire">
+            <h2>Notre savoir faire</h2>
+            <p>Pendant notre séjour en Colombie, nous avons eu la chance de visiter une plantation de café pittoresque,
+                nichée au cœur des montagnes verdoyantes. Nous avons été immédiatement captivés par l'atmosphère envoûtante 
+                et l'engagement des agriculteurs locaux à cultiver les meilleurs grains de café.
+            </p>
+            <p>
+                Au cours de cette visite, nous avons eu l'occasion de rencontrer des producteurs de café passionnés qui nous ont partagé 
+                leurs connaissances et leur amour pour le processus de culture, de récolte et de transformation du café.
+                 Nous avons été fascinés par l'attention méticuleuse portée à chaque étape de la production, 
+                 ainsi que par la diversité des saveurs et des arômes uniques que les différents terroirs colombiens offraient.
+            </p>       
+            </div>
+            <div class="container-img-experience">
+        <img class="intérieur-boutique" src="/00.assets/coffees/coffee-4618705_1920.jpg" alt="Trois tasses de café">
+        </div>
+
+        <div class="container-boutique-experience">
+        <h2>Vivez l'experience</h2>
+        <p>Notre boutique de café est bien plus qu'un simple commerce. 
+            C'est un lieu où les clients peuvent vivre une expérience sensorielle unique, 
+            en explorant les différentes origines, torréfactions et méthodes d'infusion. 
+            Nous sommes également engagés à soutenir les communautés de producteurs de café en 
+            travaillant directement avec eux et en veillant à ce que chaque tasse de café servie 
+            contribue à un commerce équitable et durable.
+        </p>
+        </div>
+
+    </section>
+
+
+</div>
+
+<section class="boutique-formulaire">
+    
+
+<div class="container-boutique-test">
+<h2>Une envie de venir ? De nous contacter ? </h2>
+ 
+<form id="contact-form">
+    <input type="hidden" name="contact_number" value="697483">      
+    <input name="user_name" type="text" class="feedback-input" placeholder="Nom" id="name" autocomplete="name" />
+    <input name="user_email" type="text" class="feedback-input" placeholder="Email"id="email" autocomplete="email"/>
+    <textarea name="message" class="feedback-input" placeholder="Message" id="message" autocomplete="off"></textarea>
+    <input class="button-submit" type="submit" value="Envoyer"/>
+  </form>
+
+
+  <div id="mapid"></div>
+
+</div>
+
+</section>
+
+
+
+</main>
+
+    <%- include('./partials/footer') %>
+</body>
+</html>

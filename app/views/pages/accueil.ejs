@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <%- include("./partials/head") %>
+        <link rel="stylesheet" href="/accueil.css">
+        
+
+        <title>O'Coffee - Accueil</title>
+    </head>
+    <body>
+    <%- include('./partials/header') %>
+    <main>
+        <!--Ajout img en background-->
+        <section class = "introduction">
+            
+            <div class="container-intro">
+                <h1>Bienvenue chez <span>O'Coffee</span></h1>
+                <div>
+                    <p>Venez découvrir notre boutique, où règne une ambiance <span>chaleureuse et accueillante</span> qui éveille tous vos sens.</p>
+                    <p>En franchissant la porte, vous êtes enveloppé d'une douce symphonie d'arômes envoûtants de café fraîchement moulu...  </p>
+                </div>
+                <button><a href="/catalogue">Voir le Catalogue</a></button>
+            </div>
+            
+           
+            
+        </section>
+    
+        <section class = "text-center nouveautes">
+            <h2>Nos Nouveautes</h2>
+            
+            <% coffees.forEach(coffee => { %>
+            <article class="product-card">
+                <img src="/00.assets/coffees/sachet1.svg" alt="Paquet de café">
+                <h3><%= coffee.name %></h3>
+                <p><%= coffee.description %></p>
+                <button><a href="/details/<%= coffee.id %>">Découvrir</a></button>
+            </article>
+            <%}) %>
+        </section>
+    
+        </section>
+    </main>
+    
+    <%- include('./partials/footer') %>
+</body>
+</html>

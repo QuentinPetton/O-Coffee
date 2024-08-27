@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include("./partials/head") %>
+        <link rel="stylesheet" href="/catalogue.css">
+        <title>O'Coffee - Catalogue</title>
+    </head>
+    <body>
+    <%- include('./partials/header') %>
+
+<main>
+
+    <section class="catalogue-intro">
+    <div class="container-img">
+<img class="intérieur-boutique" src="/00.assets/coffees/catalogue.jpeg" alt="boutique présentant grains de café">
+</div>
+
+<div class="container-catalogue">
+<h2>Notre catalogue</h2>
+<p>Les étagères en bois exposent fièrement une variété de grains de café provenant des quatre coins du monde, chacun racontant une histoire unique de terroir et de culture. Les sacs de café empilés dévoilent une palette de couleurs allant des tons chocolat aux nuances ambrées, invitant à l'exploration sensorielle.</p>
+</div>
+</section>
+
+
+<section class = "text-center catalogue">
+   
+    <form action="/catalogue/categorie" method="get" id="categorie-form">
+    <select name="categorie" id="categorie-select"  >
+    <option value="">Catégorie</option>
+
+    <% categories.forEach(coffees => { %>
+        <option value="<%= coffees.main_characteristic %>"><%= coffees.main_characteristic %></option>
+
+       <%}); %>
+
+</select>
+</form>
+
+<% for (let index = 0; index < coffees.length; index++) { %>
+    <% if (index < 3) { %>
+        <article class="coffee-display product-card">
+            <img src="/00.assets/coffees/sachet1.svg" alt="Paquet de café">
+            <h3><%= coffees[index].name %></h3>
+            <p><%= coffees[index].description %></p>
+            <button><a href="/details/<%= coffees[index].id %>">Découvrir</a></button>
+        </article>
+    <% } else { %>
+        <article class="coffee-hidden product-card">
+            <img src="/00.assets/coffees/sachet1.svg" alt="Paquet de café">
+            <h3><%= coffees[index].name %></h3>
+            <p><%= coffees[index].description %></p>
+            <button><a href="/details/<%= coffees[index].id %>">Découvrir</a></button>
+        </article>
+    <% } %>
+<% } %>
+
+</section>
+<div class="seeAll-container">
+<button id="seeAll">Voir tout</button>
+</div>
+
+</main>
+
+<%- include('./partials/footer') %>
+</body>
+</html>
