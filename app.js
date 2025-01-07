@@ -1,6 +1,7 @@
 const dotenv = require('dotenv');
 const express = require ('express');
 dotenv.config();
+console.log('Environment variables loaded:', process.env);
 
 //Mise en place du router
 const router = require('./app/routers')

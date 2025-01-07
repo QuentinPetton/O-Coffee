@@ -1,3 +1,13 @@
+CREATE TABLE IF NOT EXISTS coffee (
+    id SERIAL PRIMARY KEY,
+    description TEXT,
+    reference TEXT,
+    origin TEXT,
+    price_per_kg NUMERIC,
+    main_characteristic TEXT,
+    available BOOLEAN
+);
+
 INSERT INTO coffee (description, reference, origin, price_per_kg, main_characteristic, available) VALUES
 ('Café fort et concentré préparé en faisant passer de l''eau chaude à travers du café finement moulu.', '100955890', 'Italie', 20.99, 'Corsé', true),
 ('Café moyennement corsé avec une acidité vive et une saveur riche.', '100955894', 'Colombie', 18.75, 'Acide', true),
