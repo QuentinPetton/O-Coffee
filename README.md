@@ -24,9 +24,12 @@ Once the containers are running:
 The application will be available at <http://localhost:3000>.
 The PostgreSQL database will be accessible on port 5433.
 
-Step 4: Verify Initialization
+### Step 4: Verify Initialization
+
 Check that the database has been populated using the SQL script provided in ./data/ocoffee-dataset.sql.
-Step 5: Stop the Application
+
+### Step 5: Stop the Application
+
 To stop the application and remove the containers:
 
 ```bash
